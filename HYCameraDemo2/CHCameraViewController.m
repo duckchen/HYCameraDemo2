@@ -422,7 +422,7 @@ static NSString * const HYCellIdentifer = @"Cell";
             dispatch_async( self.sessionQueue, ^{
                 self.inProgressPhotoCaptureDelegates[@(photoCaptureDelegate.requestedPhotoSettings.uniqueID)] = nil;
             } );
-        }];
+        } album:nil];
         
         /*
          The Photo Output keeps a weak reference to the photo capture delegate so

@@ -24,14 +24,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-+ (HYAlertViewController *)alertWithTitle:(NSString *)title handler:(void (^ __nullable)(UITextField *textField))configurationHandler
++ (instancetype)alertControllerWithTitle:(NSString *)title message:(NSString *)message
 {
-    HYAlertViewController * ctr = [[self alloc] init];
-    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:nil];
-    [ctr addAction:alertAction];
-    [ctr addTextFieldWithConfigurationHandler:configurationHandler];
+    HYAlertViewController * ctr = [super alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleCancel handler:nil];
+    [ctr addAction:okAction];
+    [ctr addAction:cancelAction];
+    [ctr addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"相册名";
+    }];
     
-    
+    return ctr;
 }
 
 @end

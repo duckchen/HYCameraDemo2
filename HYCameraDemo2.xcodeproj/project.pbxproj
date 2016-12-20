@@ -23,6 +23,14 @@
 		EC6DAD121E0950310018C12C /* AVCamPhotoCaptureDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAD111E0950310018C12C /* AVCamPhotoCaptureDelegate.m */; };
 		EC6DAD181E09509C0018C12C /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAD171E09509C0018C12C /* FCFileManager.m */; };
 		EC6DAD1B1E0951400018C12C /* HYAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAD1A1E0951400018C12C /* HYAlertViewController.m */; };
+		EC6DAD291E0961E70018C12C /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = EC6DAD1F1E0961E70018C12C /* .gitkeep */; };
+		EC6DAD2A1E0961E70018C12C /* alert-round.png in Resources */ = {isa = PBXBuildFile; fileRef = EC6DAD201E0961E70018C12C /* alert-round.png */; };
+		EC6DAD2B1E0961E70018C12C /* checkmark-round.png in Resources */ = {isa = PBXBuildFile; fileRef = EC6DAD211E0961E70018C12C /* checkmark-round.png */; };
+		EC6DAD2C1E0961E70018C12C /* close-round.png in Resources */ = {isa = PBXBuildFile; fileRef = EC6DAD221E0961E70018C12C /* close-round.png */; };
+		EC6DAD2D1E0961E70018C12C /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = EC6DAD231E0961E70018C12C /* heart.png */; };
+		EC6DAD2E1E0961E70018C12C /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = EC6DAD241E0961E70018C12C /* star.png */; };
+		EC6DAD2F1E0961E70018C12C /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = EC6DAD261E0961E70018C12C /* .gitkeep */; };
+		EC6DAD301E0961E70018C12C /* FCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAD281E0961E70018C12C /* FCAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +82,15 @@
 		EC6DAD171E09509C0018C12C /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
 		EC6DAD191E0951400018C12C /* HYAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAlertViewController.h; sourceTree = "<group>"; };
 		EC6DAD1A1E0951400018C12C /* HYAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAlertViewController.m; sourceTree = "<group>"; };
+		EC6DAD1F1E0961E70018C12C /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		EC6DAD201E0961E70018C12C /* alert-round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alert-round.png"; sourceTree = "<group>"; };
+		EC6DAD211E0961E70018C12C /* checkmark-round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark-round.png"; sourceTree = "<group>"; };
+		EC6DAD221E0961E70018C12C /* close-round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-round.png"; sourceTree = "<group>"; };
+		EC6DAD231E0961E70018C12C /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		EC6DAD241E0961E70018C12C /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		EC6DAD261E0961E70018C12C /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		EC6DAD271E0961E70018C12C /* FCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAlertView.h; sourceTree = "<group>"; };
+		EC6DAD281E0961E70018C12C /* FCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,12 +212,53 @@
 		EC6DAD0B1E094BCD0018C12C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				EC6DAD161E09509C0018C12C /* FCFileManager.h */,
-				EC6DAD171E09509C0018C12C /* FCFileManager.m */,
+				EC6DAD1D1E0961E70018C12C /* FCAlertView */,
+				EC6DAD1C1E0961B80018C12C /* FCFileManager */,
 				EC6DAD191E0951400018C12C /* HYAlertViewController.h */,
 				EC6DAD1A1E0951400018C12C /* HYAlertViewController.m */,
 			);
 			name = Tool;
+			sourceTree = "<group>";
+		};
+		EC6DAD1C1E0961B80018C12C /* FCFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				EC6DAD161E09509C0018C12C /* FCFileManager.h */,
+				EC6DAD171E09509C0018C12C /* FCFileManager.m */,
+			);
+			name = FCFileManager;
+			sourceTree = "<group>";
+		};
+		EC6DAD1D1E0961E70018C12C /* FCAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				EC6DAD1E1E0961E70018C12C /* Assets */,
+				EC6DAD251E0961E70018C12C /* Classes */,
+			);
+			path = FCAlertView;
+			sourceTree = "<group>";
+		};
+		EC6DAD1E1E0961E70018C12C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EC6DAD1F1E0961E70018C12C /* .gitkeep */,
+				EC6DAD201E0961E70018C12C /* alert-round.png */,
+				EC6DAD211E0961E70018C12C /* checkmark-round.png */,
+				EC6DAD221E0961E70018C12C /* close-round.png */,
+				EC6DAD231E0961E70018C12C /* heart.png */,
+				EC6DAD241E0961E70018C12C /* star.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		EC6DAD251E0961E70018C12C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EC6DAD261E0961E70018C12C /* .gitkeep */,
+				EC6DAD271E0961E70018C12C /* FCAlertView.h */,
+				EC6DAD281E0961E70018C12C /* FCAlertView.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,9 +370,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6DAD2D1E0961E70018C12C /* heart.png in Resources */,
 				EC6DAC1E1E08C9C60018C12C /* LaunchScreen.storyboard in Resources */,
+				EC6DAD2E1E0961E70018C12C /* star.png in Resources */,
 				EC6DAC1B1E08C9C60018C12C /* Assets.xcassets in Resources */,
+				EC6DAD2B1E0961E70018C12C /* checkmark-round.png in Resources */,
 				EC6DAC191E08C9C60018C12C /* Main.storyboard in Resources */,
+				EC6DAD291E0961E70018C12C /* .gitkeep in Resources */,
+				EC6DAD2F1E0961E70018C12C /* .gitkeep in Resources */,
+				EC6DAD2A1E0961E70018C12C /* alert-round.png in Resources */,
+				EC6DAD2C1E0961E70018C12C /* close-round.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +413,7 @@
 				EC6DAC101E08C9C60018C12C /* main.m in Sources */,
 				EC6DAD121E0950310018C12C /* AVCamPhotoCaptureDelegate.m in Sources */,
 				EC6DAD0A1E093E860018C12C /* HYAlbumCollectionViewCell.m in Sources */,
+				EC6DAD301E0961E70018C12C /* FCAlertView.m in Sources */,
 				EC6DAD071E092CBC0018C12C /* HYAlbum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

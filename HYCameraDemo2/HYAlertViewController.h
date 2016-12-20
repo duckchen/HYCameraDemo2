@@ -10,6 +10,6 @@
 
 @interface HYAlertViewController : UIAlertController
 
-+ (HYAlertViewController *)alertWithTitle:(NSString *)title handler:(void (^ __nullable)(UITextField *textField))configurationHandler;
++ (instancetype)alertControllerWithTitle:(NSString *)title message:(NSString *)message;
 
 @end
