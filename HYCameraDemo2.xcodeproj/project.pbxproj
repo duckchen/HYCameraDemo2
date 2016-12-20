@@ -16,13 +16,13 @@
 		EC6DAC341E08C9C60018C12C /* HYCameraDemo2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAC331E08C9C60018C12C /* HYCameraDemo2UITests.m */; };
 		EC6DAC431E08C9EA0018C12C /* CHCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAC421E08C9EA0018C12C /* CHCameraViewController.m */; };
 		EC6DAC461E08D5A50018C12C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6DAC451E08D5A50018C12C /* AVFoundation.framework */; };
-		EC6DACFA1E09092D0018C12C /* AVCamPhotoCaptureDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DACF91E09092D0018C12C /* AVCamPhotoCaptureDelegate.m */; };
 		EC6DACFD1E0925850018C12C /* HYAlbumCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DACFC1E0925850018C12C /* HYAlbumCollection.m */; };
-		EC6DAD001E09292D0018C12C /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DACFF1E09292D0018C12C /* FCFileManager.m */; };
 		EC6DAD041E092CAB0018C12C /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAD031E092CAB0018C12C /* BaseEntity.m */; };
 		EC6DAD071E092CBC0018C12C /* HYAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAD061E092CBC0018C12C /* HYAlbum.m */; };
 		EC6DAD0A1E093E860018C12C /* HYAlbumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAD091E093E860018C12C /* HYAlbumCollectionViewCell.m */; };
-		EC6DAD0E1E094BED0018C12C /* CRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAD0D1E094BED0018C12C /* CRAlertView.m */; };
+		EC6DAD121E0950310018C12C /* AVCamPhotoCaptureDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAD111E0950310018C12C /* AVCamPhotoCaptureDelegate.m */; };
+		EC6DAD181E09509C0018C12C /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAD171E09509C0018C12C /* FCFileManager.m */; };
+		EC6DAD1B1E0951400018C12C /* HYAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAD1A1E0951400018C12C /* HYAlertViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,20 +60,20 @@
 		EC6DAC411E08C9EA0018C12C /* CHCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCameraViewController.h; sourceTree = "<group>"; };
 		EC6DAC421E08C9EA0018C12C /* CHCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCameraViewController.m; sourceTree = "<group>"; };
 		EC6DAC451E08D5A50018C12C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		EC6DACF81E09092D0018C12C /* AVCamPhotoCaptureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVCamPhotoCaptureDelegate.h; path = "../../../../Downloads/AVCam-iOSUsingAVFoundationtoCaptureImagesandMovies/Objective-C/AVCam/AVCamPhotoCaptureDelegate.h"; sourceTree = "<group>"; };
-		EC6DACF91E09092D0018C12C /* AVCamPhotoCaptureDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVCamPhotoCaptureDelegate.m; path = "../../../../Downloads/AVCam-iOSUsingAVFoundationtoCaptureImagesandMovies/Objective-C/AVCam/AVCamPhotoCaptureDelegate.m"; sourceTree = "<group>"; };
 		EC6DACFB1E0925850018C12C /* HYAlbumCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAlbumCollection.h; sourceTree = "<group>"; };
 		EC6DACFC1E0925850018C12C /* HYAlbumCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAlbumCollection.m; sourceTree = "<group>"; };
-		EC6DACFE1E09292D0018C12C /* FCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCFileManager.h; path = ../../../albume/src/albume/Tools/FCFileManager/FCFileManager.h; sourceTree = "<group>"; };
-		EC6DACFF1E09292D0018C12C /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCFileManager.m; path = ../../../albume/src/albume/Tools/FCFileManager/FCFileManager.m; sourceTree = "<group>"; };
 		EC6DAD021E092CAB0018C12C /* BaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
 		EC6DAD031E092CAB0018C12C /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
 		EC6DAD051E092CBC0018C12C /* HYAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAlbum.h; sourceTree = "<group>"; };
 		EC6DAD061E092CBC0018C12C /* HYAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAlbum.m; sourceTree = "<group>"; };
 		EC6DAD081E093E860018C12C /* HYAlbumCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAlbumCollectionViewCell.h; sourceTree = "<group>"; };
 		EC6DAD091E093E860018C12C /* HYAlbumCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAlbumCollectionViewCell.m; sourceTree = "<group>"; };
-		EC6DAD0C1E094BED0018C12C /* CRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRAlertView.h; path = ../../../albume/src/albume/Tools/CRAlertView/CRAlertView.h; sourceTree = "<group>"; };
-		EC6DAD0D1E094BED0018C12C /* CRAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRAlertView.m; path = ../../../albume/src/albume/Tools/CRAlertView/CRAlertView.m; sourceTree = "<group>"; };
+		EC6DAD101E0950310018C12C /* AVCamPhotoCaptureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPhotoCaptureDelegate.h; sourceTree = "<group>"; };
+		EC6DAD111E0950310018C12C /* AVCamPhotoCaptureDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPhotoCaptureDelegate.m; sourceTree = "<group>"; };
+		EC6DAD161E09509C0018C12C /* FCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFileManager.h; sourceTree = "<group>"; };
+		EC6DAD171E09509C0018C12C /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
+		EC6DAD191E0951400018C12C /* HYAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAlertViewController.h; sourceTree = "<group>"; };
+		EC6DAD1A1E0951400018C12C /* HYAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAlertViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +128,8 @@
 			children = (
 				EC6DAD0B1E094BCD0018C12C /* Tool */,
 				EC6DAD011E092C760018C12C /* Entity */,
-				EC6DACFE1E09292D0018C12C /* FCFileManager.h */,
-				EC6DACFF1E09292D0018C12C /* FCFileManager.m */,
-				EC6DACF81E09092D0018C12C /* AVCamPhotoCaptureDelegate.h */,
-				EC6DACF91E09092D0018C12C /* AVCamPhotoCaptureDelegate.m */,
+				EC6DAD101E0950310018C12C /* AVCamPhotoCaptureDelegate.h */,
+				EC6DAD111E0950310018C12C /* AVCamPhotoCaptureDelegate.m */,
 				EC6DAC111E08C9C60018C12C /* AppDelegate.h */,
 				EC6DAC121E08C9C60018C12C /* AppDelegate.m */,
 				EC6DAC411E08C9EA0018C12C /* CHCameraViewController.h */,
@@ -197,18 +195,12 @@
 		EC6DAD0B1E094BCD0018C12C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				EC6DAD0F1E094BF50018C12C /* CRAlertView */,
+				EC6DAD161E09509C0018C12C /* FCFileManager.h */,
+				EC6DAD171E09509C0018C12C /* FCFileManager.m */,
+				EC6DAD191E0951400018C12C /* HYAlertViewController.h */,
+				EC6DAD1A1E0951400018C12C /* HYAlertViewController.m */,
 			);
 			name = Tool;
-			sourceTree = "<group>";
-		};
-		EC6DAD0F1E094BF50018C12C /* CRAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				EC6DAD0C1E094BED0018C12C /* CRAlertView.h */,
-				EC6DAD0D1E094BED0018C12C /* CRAlertView.m */,
-			);
-			name = CRAlertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,16 +339,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC6DAD0E1E094BED0018C12C /* CRAlertView.m in Sources */,
 				EC6DAD041E092CAB0018C12C /* BaseEntity.m in Sources */,
+				EC6DAD181E09509C0018C12C /* FCFileManager.m in Sources */,
 				EC6DAC131E08C9C60018C12C /* AppDelegate.m in Sources */,
 				EC6DAC431E08C9EA0018C12C /* CHCameraViewController.m in Sources */,
+				EC6DAD1B1E0951400018C12C /* HYAlertViewController.m in Sources */,
 				EC6DACFD1E0925850018C12C /* HYAlbumCollection.m in Sources */,
 				EC6DAC101E08C9C60018C12C /* main.m in Sources */,
+				EC6DAD121E0950310018C12C /* AVCamPhotoCaptureDelegate.m in Sources */,
 				EC6DAD0A1E093E860018C12C /* HYAlbumCollectionViewCell.m in Sources */,
-				EC6DAD001E09292D0018C12C /* FCFileManager.m in Sources */,
 				EC6DAD071E092CBC0018C12C /* HYAlbum.m in Sources */,
-				EC6DACFA1E09092D0018C12C /* AVCamPhotoCaptureDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

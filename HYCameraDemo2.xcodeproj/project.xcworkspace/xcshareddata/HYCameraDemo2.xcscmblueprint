@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4609DF2F28997D419649255C4F3755CC8CED58BA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4609DF2F28997D419649255C4F3755CC8CED58BA" : 9223372036854775807,
+    "7F05944CAAEC17481BEBAC8946AD4BB0163CD449" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "977F003C-D627-481B-8A28-D4269B06BC2B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4609DF2F28997D419649255C4F3755CC8CED58BA" : "HYCameraDemo2\/",
+    "7F05944CAAEC17481BEBAC8946AD4BB0163CD449" : "..\/albume"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HYCameraDemo2",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HYCameraDemo2.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/duckchen\/HYCameraDemo2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4609DF2F28997D419649255C4F3755CC8CED58BA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "dev.clever-rock.com:ios\/albume.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7F05944CAAEC17481BEBAC8946AD4BB0163CD449"
+    }
+  ]
+}
