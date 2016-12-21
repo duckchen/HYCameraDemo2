@@ -25,6 +25,7 @@
         _titleLabel.textColor = [UIColor blueColor];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.font = [UIFont systemFontOfSize:12];
+        [self.contentView addSubview:_titleLabel];
     }
     
     return _titleLabel;
@@ -44,9 +45,9 @@
 {
     self.titleLabel.text = title;
     if (selected) {
-        self.titleLabel.font = [UIFont systemFontOfSize:12];
+        self.titleLabel.font = [UIFont systemFontOfSize:15];
     } else {
-        self.titleLabel.font = [UIFont systemFontOfSize:14];
+        self.titleLabel.font = [UIFont systemFontOfSize:12];
     }
 }
 

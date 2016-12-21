@@ -112,7 +112,7 @@
 	[PHPhotoLibrary requestAuthorization:^( PHAuthorizationStatus status ) {
 		if ( status == PHAuthorizationStatusAuthorized ) {
             if (self.album) {
-                [self saveImageToAlbume:self.photoData];
+                [self.album saveImageToSystemAlbum:self.photoData];
             } else {
                 [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
                     PHAssetCreationRequest *creationRequest = [PHAssetCreationRequest creationRequestForAsset];
@@ -137,37 +137,6 @@
 			[self didFinish];
 		}
 	}];
-}
-
-//保存照片至本地相册
--(void)saveImageToAlbume:(NSData*)data
-{
-    UIImage *image = [UIImage imageWithData:data];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        PHPhotoLibrary* photoLibrary = [PHPhotoLibrary sharedPhotoLibrary];
-        [photoLibrary performChanges:^{
-            PHFetchResult* fetchCollectionResult;
-            PHAssetCollectionChangeRequest* collectionRequest;
-            if(self.album.isDocCreated){
-                fetchCollectionResult = [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:@[self.album.ID] options:nil];
-                PHAssetCollection* exisitingCollection = fetchCollectionResult.firstObject;
-                collectionRequest = [PHAssetCollectionChangeRequest changeRequestForAssetCollection:exisitingCollection];
-            } else {
-                fetchCollectionResult = [PHAssetCollection fetchAssetCollectionsWithLocalIdentifiers:@[self.album.title] options:nil];
-                // Create a new album
-                if (!fetchCollectionResult || fetchCollectionResult.count == 0 ){
-                    collectionRequest = [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:self.album.title];
-                    self.album.isDocCreated = YES;
-                }
-            }
-            PHAssetChangeRequest* createAssetRequest = [PHAssetChangeRequest creationRequestForAssetFromImage:image];
-            [collectionRequest addAssets:@[createAssetRequest.placeholderForCreatedAsset]];
-        } completionHandler:^(BOOL success, NSError *error){
-            if (error) {
-                NSLog(@"error:%@",error);
-            }
-        }];
-    });
 }
 
 @end

@@ -6,9 +6,11 @@
 //  Copyright © 2016年 Chy. All rights reserved.
 //
 
+#import <Photos/Photos.h>
 #import "HYAlbumCollection.h"
 #import "FCFileManager.h"
 #import "HYAlbum.h"
+
 
 static NSString * const HYAlbumListKey = @"albumList";
 
@@ -36,18 +38,27 @@ static NSString * const HYAlbumListKey = @"albumList";
 {
     self = [super init];
     if (self) {
-        _albumList = [NSKeyedUnarchiver unarchiveObjectWithFile:self.filePath];
+//        [self setAlbumListFromSystemAlbumeWithType:PHAssetCollectionTypeAlbum
+//                                           subtype:PHAssetCollectionSubtypeAny];
+        [self loadArchive];
     }
     
     return self;
 }
 
+- (void)loadArchive
+{
+    self.albumList = [NSKeyedUnarchiver unarchiveObjectWithFile:self.filePath];
+}
+
 - (void)archive
 {
+    [self.lock lock];
     BOOL success = [NSKeyedArchiver archiveRootObject:self.albumList toFile:self.filePath];
     if (success) {
         NSLog(@"保存相册列表成功");
     }
+    [self.lock unlock];
 }
 
 - (NSString *)filePath
@@ -60,7 +71,7 @@ static NSString * const HYAlbumListKey = @"albumList";
         [FCFileManager createDirectoriesForPath:filePath];
     }
     
-    return filePath;
+    return [filePath stringByAppendingString:@".archive"];
 }
 
 // MARK: - NSCoding delegate methods

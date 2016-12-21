@@ -1486,7 +1486,7 @@
                                      @"action" : textReturn}];
     else
         [alertTextFields addObject:@{@"placeholder" : placeholder,
-                                     @"action" : @0}];
+                                                            }];
     
 }
 

@@ -21,12 +21,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubi-ay-9Zb">
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubi-ay-9Zb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdj-3M-bZW">
                                         <rect key="frame" x="155.5" y="559" width="64" height="64"/>
                                         <color key="backgroundColor" red="0.76923835084934811" green="1" blue="0.60239285984856328" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="6Td-Oz-fp0"/>
                                             <constraint firstAttribute="width" constant="64" id="IAH-6E-TW7"/>
@@ -56,17 +57,17 @@
                                             <constraint firstAttribute="height" constant="36" id="RU5-c0-d2h"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="78Y-ba-8XW">
-                                            <size key="itemSize" width="50" height="36"/>
+                                            <size key="itemSize" width="64" height="36"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Qvp-r3-5KI">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="36"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="64" height="36"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </view>
                                             </collectionViewCell>
@@ -89,6 +90,7 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="NJz-wi-lck" secondAttribute="trailing" constant="40" id="7gh-Xi-PUb"/>
                                     <constraint firstItem="LUm-7J-ZY6" firstAttribute="leading" secondItem="ubi-ay-9Zb" secondAttribute="leading" constant="24" id="AGF-pY-Uue"/>
@@ -102,6 +104,9 @@
                                     <constraint firstAttribute="bottom" secondItem="Gdj-3M-bZW" secondAttribute="bottom" constant="44" id="lsZ-VY-9gR"/>
                                     <constraint firstItem="Gdj-3M-bZW" firstAttribute="centerX" secondItem="ubi-ay-9Zb" secondAttribute="centerX" id="wbd-B7-eAm"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yRB-kg-VWS" appends="YES" id="bjP-mW-Jty"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -121,6 +126,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="yRB-kg-VWS">
+                    <connections>
+                        <action selector="viewTouched:" destination="BYZ-38-t0r" id="7P6-8z-uXz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="105.69715142428787"/>
         </scene>

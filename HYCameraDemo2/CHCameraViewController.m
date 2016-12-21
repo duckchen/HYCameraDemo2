@@ -12,10 +12,14 @@
 #import "HYAlbumCollection.h"
 #import "HYAlbumCollectionViewCell.h"
 #import "HYAlbum.h"
+#import "FCAlertView.h"
 
 static NSString * const HYCellIdentifer = @"Cell";
 
-@interface CHCameraViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface CHCameraViewController ()
+<UICollectionViewDelegate,
+UICollectionViewDataSource,
+FCAlertViewDelegate>
 
 @property (nonatomic, assign) HYCameraPosition              cameraPosition;
 @property (nonatomic, assign) HYCameraFlashMode             flashMode;
@@ -38,7 +42,6 @@ static NSString * const HYCellIdentifer = @"Cell";
 @property (nonatomic, strong) HYAlbumCollection * albumCollection;
 @property (nonatomic, assign) NSInteger         seletedItem;
 
-
 @end
 
 @implementation CHCameraViewController
@@ -55,8 +58,18 @@ static NSString * const HYCellIdentifer = @"Cell";
     return _inProgressPhotoCaptureDelegates;
 }
 
+- (HYAlbumCollection *)albumCollection
+{
+    if (_albumCollection == nil) {
+        _albumCollection = [[HYAlbumCollection alloc] init];
+    }
+    
+    return _albumCollection;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.seletedItem = -1;
     [self.albumColletcionView registerClass:[HYAlbumCollectionViewCell class] forCellWithReuseIdentifier:HYCellIdentifer];
     // Communicate with the session and other session objects on this queue.
     self.sessionQueue = dispatch_queue_create( "session queue", DISPATCH_QUEUE_SERIAL );
@@ -383,6 +396,10 @@ static NSString * const HYCellIdentifer = @"Cell";
          */
         
         // Use a separate object for the photo capture delegate to isolate each capture life cycle.
+        HYAlbum *album = nil;
+        if (self.seletedItem >= 0) {
+            album = [self.albumCollection albumListShallowCopy][self.seletedItem];
+        }
         AVCamPhotoCaptureDelegate *photoCaptureDelegate = [[AVCamPhotoCaptureDelegate alloc] initWithRequestedPhotoSettings:photoSettings willCapturePhotoAnimation:^{
             dispatch_async( dispatch_get_main_queue(), ^{
                 self.previewLayer.opacity = 0.0;
@@ -422,7 +439,7 @@ static NSString * const HYCellIdentifer = @"Cell";
             dispatch_async( self.sessionQueue, ^{
                 self.inProgressPhotoCaptureDelegates[@(photoCaptureDelegate.requestedPhotoSettings.uniqueID)] = nil;
             } );
-        } album:nil];
+        } album:album];
         
         /*
          The Photo Output keeps a weak reference to the photo capture delegate so
@@ -496,7 +513,56 @@ static NSString * const HYCellIdentifer = @"Cell";
 }
 
 - (IBAction)addNewAlbum:(id)sender {
-    
+    FCAlertView *alertView = [[FCAlertView alloc] init];
+    alertView.delegate = self;
+    [alertView addTextFieldWithPlaceholder:@"相册名" andTextReturnBlock:nil];
+    [alertView showAlertWithTitle:@"输入相册名" withSubtitle:nil withCustomImage:nil withDoneButtonTitle:@"取消" andButtons:@[@"确认"]];
+}
+- (IBAction)viewTouched:(UITapGestureRecognizer *)sender {
+    CGPoint devicePoint = [self.previewLayer captureDevicePointOfInterestForPoint:[sender locationInView:sender.view]];
+    [self focusWithMode:AVCaptureFocusModeAutoFocus exposeWithMode:AVCaptureExposureModeAutoExpose atDevicePoint:devicePoint monitorSubjectAreaChange:YES];
+}
+
+- (void)focusWithMode:(AVCaptureFocusMode)focusMode exposeWithMode:(AVCaptureExposureMode)exposureMode atDevicePoint:(CGPoint)point monitorSubjectAreaChange:(BOOL)monitorSubjectAreaChange
+{
+    dispatch_async( self.sessionQueue, ^{
+        AVCaptureDevice *device = self.photoInput.device;
+        NSError *error = nil;
+        if ( [device lockForConfiguration:&error] ) {
+            /*
+             Setting (focus/exposure)PointOfInterest alone does not initiate a (focus/exposure) operation.
+             Call set(Focus/Exposure)Mode() to apply the new point of interest.
+             */
+            if ( device.isFocusPointOfInterestSupported && [device isFocusModeSupported:focusMode] ) {
+                device.focusPointOfInterest = point;
+                device.focusMode = focusMode;
+            }
+            
+            if ( device.isExposurePointOfInterestSupported && [device isExposureModeSupported:exposureMode] ) {
+                device.exposurePointOfInterest = point;
+                device.exposureMode = exposureMode;
+            }
+            
+            device.subjectAreaChangeMonitoringEnabled = monitorSubjectAreaChange;
+            [device unlockForConfiguration];
+        }
+        else {
+            NSLog( @"Could not lock device for configuration: %@", error );
+        }
+    } );
+}
+
+// MARK: - FCAlertViewDelegate
+//--------------------------------------------------------------------
+
+- (void)FCAlertView:(FCAlertView *)alertView clickedButtonIndex:(NSInteger)index buttonTitle:(NSString *)title
+{
+    NSLog(@"button index = %ld title = %@ textReturn = %@", index, title, alertView.textField.text);
+    HYAlbum *album = [[HYAlbum alloc] init];
+    album.title = alertView.textField.text;
+    [self.albumCollection addAlbum:album];
+    [self.albumCollection archive];
+    [self.albumColletcionView reloadData];
 }
 
 // MARK: - UIColletionView datasource
@@ -515,6 +581,20 @@ static NSString * const HYCellIdentifer = @"Cell";
     [cell configCellWithTitle:album.title selected:isSelected];
     
     return cell;
+}
+
+// MARK: - UICollectionView delegate
+//--------------------------------------------------------------------
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.item == self.seletedItem) {
+        self.seletedItem = -1;
+    } else {
+        self.seletedItem = indexPath.row;
+    }
+    
+    [self.albumColletcionView reloadData];
 }
 
 @end

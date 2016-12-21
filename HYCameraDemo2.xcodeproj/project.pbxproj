@@ -22,7 +22,6 @@
 		EC6DAD0A1E093E860018C12C /* HYAlbumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAD091E093E860018C12C /* HYAlbumCollectionViewCell.m */; };
 		EC6DAD121E0950310018C12C /* AVCamPhotoCaptureDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAD111E0950310018C12C /* AVCamPhotoCaptureDelegate.m */; };
 		EC6DAD181E09509C0018C12C /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAD171E09509C0018C12C /* FCFileManager.m */; };
-		EC6DAD1B1E0951400018C12C /* HYAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAD1A1E0951400018C12C /* HYAlertViewController.m */; };
 		EC6DAD291E0961E70018C12C /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = EC6DAD1F1E0961E70018C12C /* .gitkeep */; };
 		EC6DAD2A1E0961E70018C12C /* alert-round.png in Resources */ = {isa = PBXBuildFile; fileRef = EC6DAD201E0961E70018C12C /* alert-round.png */; };
 		EC6DAD2B1E0961E70018C12C /* checkmark-round.png in Resources */ = {isa = PBXBuildFile; fileRef = EC6DAD211E0961E70018C12C /* checkmark-round.png */; };
@@ -80,8 +79,6 @@
 		EC6DAD111E0950310018C12C /* AVCamPhotoCaptureDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPhotoCaptureDelegate.m; sourceTree = "<group>"; };
 		EC6DAD161E09509C0018C12C /* FCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFileManager.h; sourceTree = "<group>"; };
 		EC6DAD171E09509C0018C12C /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
-		EC6DAD191E0951400018C12C /* HYAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAlertViewController.h; sourceTree = "<group>"; };
-		EC6DAD1A1E0951400018C12C /* HYAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAlertViewController.m; sourceTree = "<group>"; };
 		EC6DAD1F1E0961E70018C12C /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		EC6DAD201E0961E70018C12C /* alert-round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alert-round.png"; sourceTree = "<group>"; };
 		EC6DAD211E0961E70018C12C /* checkmark-round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark-round.png"; sourceTree = "<group>"; };
@@ -214,8 +211,6 @@
 			children = (
 				EC6DAD1D1E0961E70018C12C /* FCAlertView */,
 				EC6DAD1C1E0961B80018C12C /* FCFileManager */,
-				EC6DAD191E0951400018C12C /* HYAlertViewController.h */,
-				EC6DAD1A1E0951400018C12C /* HYAlertViewController.m */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -408,7 +403,6 @@
 				EC6DAD181E09509C0018C12C /* FCFileManager.m in Sources */,
 				EC6DAC131E08C9C60018C12C /* AppDelegate.m in Sources */,
 				EC6DAC431E08C9EA0018C12C /* CHCameraViewController.m in Sources */,
-				EC6DAD1B1E0951400018C12C /* HYAlertViewController.m in Sources */,
 				EC6DACFD1E0925850018C12C /* HYAlbumCollection.m in Sources */,
 				EC6DAC101E08C9C60018C12C /* main.m in Sources */,
 				EC6DAD121E0950310018C12C /* AVCamPhotoCaptureDelegate.m in Sources */,
